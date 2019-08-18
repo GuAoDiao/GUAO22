@@ -1,0 +1,99 @@
+
+// IMPLEMENT_CLASS(UGAObject01, 3246748092);
+// #define IMPLEMENT_CLASS(TClass, TClassCrc)
+
+// Register a class at startup time.
+static	TClassCompiledInDefer<UGAObject01> AutoInitializeUGAObject01(TEXT("UGAObject01"), sizeof(UGAObject01), 3246748092);
+UClass* UGAObject01::GetPrivateStaticClass()
+{
+	static UClass* PrivateStaticClass = NULL;
+	if (!PrivateStaticClass)
+	{
+		/* this could be handled with templates, but we want it external to avoid code bloat */ \
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			(TCHAR*)TEXT("UGAObject01") + 1 + ((StaticClassFlags & CLASS_Deprecated) ? 11 : 0),
+			PrivateStaticClass,
+			StaticRegisterNativesUGAObject01,
+			sizeof(UGAObject01),
+			(EClassFlags)UGAObject01::StaticClassFlags,
+			UGAObject01::StaticClassCastFlags(),
+			UGAObject01::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<UGAObject01>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<UGAObject01>,
+			&UGAObject01::AddReferencedObjects,
+			&UGAObject01::Super::StaticClass,
+			&UGAObject01::WithinClass::StaticClass
+		);
+	}
+	return PrivateStaticClass;
+}
+
+// DEFINE_VTABLE_PTR_HELPER_CTOR(UGAObject01);
+// #define DEFINE_VTABLE_PTR_HELPER_CTOR(TClass)
+UGAObject01::UGAObject01(FVTableHelper& Helper) : Super(Helper) {};
+
+/**
+ * Stashes the singleton function that builds a compiled in class. Later, this is executed.
+ */
+COREUOBJECT_API void UObjectCompiledInDefer(class UClass *(*InRegister)(), class UClass *(*InStaticClass)(), const TCHAR* Name, const TCHAR* PackageName, bool bDynamic, const TCHAR* DynamicPathName, void(*InInitSearchableValues)(TMap<FName, FName>&));
+
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGAObject01(Z_Construct_UClass_UGAObject01, &UGAObject01::StaticClass, TEXT("/Script/GUAO22"), TEXT("UGAObject01"), false, nullptr, nullptr, nullptr);
+
+struct FCompiledInDefer
+{
+	FCompiledInDefer(class UClass *(*InRegister)(), class UClass *(*InStaticClass)(), 
+		const TCHAR* PackageName, const TCHAR* Name, bool bDynamic, const TCHAR* DynamicPackageName = nullptr,
+		const TCHAR* DynamicPathName = nullptr, void(*InInitSearchableValues)(TMap<FName, FName>&) = nullptr)
+	{
+		if (bDynamic)
+		{
+			GetConvertedDynamicPackageNameToTypeName().Add(FName(DynamicPackageName), FName(Name));
+		}
+		UObjectCompiledInDefer(InRegister, InStaticClass, Name, PackageName, bDynamic, DynamicPathName, InInitSearchableValues);
+	}
+};
+
+
+
+0x00000000u = CLASS_None
+0x00000001u = CLASS_Abstract
+0x00000002u = CLASS_DefaultConfig
+0x00000004u = CLASS_Config
+0x00000008u = CLASS_Transient
+0x00000010u = CLASS_Parsed
+0x00000020u = CLASS_MatchedSerializers
+0x00000040u = CLASS_AdvancedDisplay
+0x00000080u = CLASS_Native
+0x00000100u = CLASS_NoExport
+0x00000200u = CLASS_NotPlaceable
+0x00000400u = CLASS_PerObjectConfig
+0x00000800u = CLASS_ReplicationDataIsSetUp
+0x00001000u = CLASS_EditInlineNew
+0x00002000u = CLASS_CollapseCategories
+0x00004000u = CLASS_Interface
+0x00008000u = CLASS_CustomConstructor
+0x00010000u = CLASS_Const
+0x00020000u = CLASS_LayoutChanging
+0x00040000u = CLASS_CompiledFromBlueprint
+0x00080000u = CLASS_MinimalAPI
+0x00100000u = CLASS_RequiredAPI
+0x00200000u = CLASS_DefaultToInstanced
+0x00400000u = CLASS_TokenStreamAssembled
+0x00800000u = CLASS_HasInstancedReference
+0x01000000u = CLASS_Hidden
+0x02000000u = CLASS_Deprecated
+0x04000000u = CLASS_HideDropDown
+0x08000000u = CLASS_GlobalUserConfig
+0x10000000u = CLASS_Intrinsic
+0x20000000u = CLASS_Constructed
+0x40000000u = CLASS_ConfigDoNotCheckDefaults
+0x80000000u = CLASS_NewerVersionExists
+
+0x001000A0
+- 0x00100000 CLASS_RequiredAPI
+= 0x000000A0
+- 0x00000080 CLASS_Native
+= 0x00000020
+- 0x00000020 CLASS_MatchedSerializers
+= 0x00000000
